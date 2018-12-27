@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B844426821D0976200B9F304 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844426721D0976200B9F304 /* ImageCollectionViewCell.swift */; };
+		B844426A21D0AD6600B9F304 /* FlickrImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844426921D0AD6600B9F304 /* FlickrImageViewController.swift */; };
+		B85717FD21D0DC22000A702E /* FlickrSearchViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85717FC21D0DC22000A702E /* FlickrSearchViewControllerPresenter.swift */; };
+		B85717FF21D0DC8C000A702E /* FlickrImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85717FE21D0DC8C000A702E /* FlickrImage.swift */; };
+		B857180321D14BA2000A702E /* FlickrImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857180221D14BA2000A702E /* FlickrImageSearchViewController.swift */; };
+		B870EF7421D4FABD00792267 /* RouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870EF7321D4FABD00792267 /* RouterSpy.swift */; };
+		B870EF7621D50E2500792267 /* FlickrImageSearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870EF7521D50E2500792267 /* FlickrImageSearchViewControllerTests.swift */; };
+		B8AF0AB021D36866006E1025 /* FlickrViewControllerPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AF0AAF21D36866006E1025 /* FlickrViewControllerPresenterTest.swift */; };
+		B8AF0AB321D369F5006E1025 /* FlikrImageSearchViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AF0AB221D369F5006E1025 /* FlikrImageSearchViewSpy.swift */; };
+		B8AF0AB521D36A07006E1025 /* NetworkManagerProtocolSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AF0AB421D36A07006E1025 /* NetworkManagerProtocolSpy.swift */; };
+		B8CB7FEA21CF95450059938E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB7FE921CF95450059938E /* AppDelegate.swift */; };
+		B8CB7FEF21CF95450059938E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8CB7FED21CF95450059938E /* Main.storyboard */; };
+		B8CB7FF121CF95470059938E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8CB7FF021CF95470059938E /* Assets.xcassets */; };
+		B8CB7FF421CF95470059938E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8CB7FF221CF95470059938E /* LaunchScreen.storyboard */; };
+		B8CB800F21CFA3980059938E /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB800E21CFA3980059938E /* EndPointType.swift */; };
+		B8CB801121CFA4850059938E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB801021CFA4850059938E /* HTTPMethod.swift */; };
+		B8CB801321CFA5200059938E /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB801221CFA5200059938E /* HTTPTask.swift */; };
+		B8CB801521CFA6C10059938E /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB801421CFA6C10059938E /* ParameterEncoding.swift */; };
+		B8CB801921CFA8F10059938E /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB801821CFA8F10059938E /* URLParameterEncoder.swift */; };
+		B8CB801B21CFABC20059938E /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB801A21CFABC20059938E /* JSONParameterEncoder.swift */; };
+		B8CB801F21CFB41F0059938E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB801E21CFB41F0059938E /* Router.swift */; };
+		B8CB802321CFB93D0059938E /* FlickrImageEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB802221CFB93D0059938E /* FlickrImageEndPoint.swift */; };
+		B8CB802521CFB95D0059938E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB802421CFB95D0059938E /* NetworkManager.swift */; };
+		B8DABF0A21D4E1C90091826B /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DABF0921D4E1C90091826B /* RouterTest.swift */; };
+		B8DABF0C21D4E3250091826B /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DABF0B21D4E3250091826B /* NetworkManagerTest.swift */; };
+		B8DABF0E21D4E3890091826B /* FlickrImageViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DABF0D21D4E3890091826B /* FlickrImageViewControllerPresenter.swift */; };
+		B8DABF1021D4EEB00091826B /* FlickrImageViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DABF0F21D4EEB00091826B /* FlickrImageViewSpy.swift */; };
+		B8DABF1221D4F1740091826B /* FlickrImageVIewControllerPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DABF1121D4F1740091826B /* FlickrImageVIewControllerPresenterTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8CB7FFB21CF95470059938E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8CB7FDE21CF95450059938E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8CB7FE521CF95450059938E;
+			remoteInfo = UberMobileCodingChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B844426721D0976200B9F304 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B844426921D0AD6600B9F304 /* FlickrImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageViewController.swift; sourceTree = "<group>"; };
+		B85717FC21D0DC22000A702E /* FlickrSearchViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrSearchViewControllerPresenter.swift; sourceTree = "<group>"; };
+		B85717FE21D0DC8C000A702E /* FlickrImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImage.swift; sourceTree = "<group>"; };
+		B857180221D14BA2000A702E /* FlickrImageSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrImageSearchViewController.swift; sourceTree = "<group>"; };
+		B870EF7321D4FABD00792267 /* RouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterSpy.swift; sourceTree = "<group>"; };
+		B870EF7521D50E2500792267 /* FlickrImageSearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageSearchViewControllerTests.swift; sourceTree = "<group>"; };
+		B8AF0AAF21D36866006E1025 /* FlickrViewControllerPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrViewControllerPresenterTest.swift; sourceTree = "<group>"; };
+		B8AF0AB221D369F5006E1025 /* FlikrImageSearchViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlikrImageSearchViewSpy.swift; sourceTree = "<group>"; };
+		B8AF0AB421D36A07006E1025 /* NetworkManagerProtocolSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocolSpy.swift; sourceTree = "<group>"; };
+		B8CB7FE621CF95450059938E /* UberMobileCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberMobileCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8CB7FE921CF95450059938E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8CB7FEE21CF95450059938E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8CB7FF021CF95470059938E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8CB7FF321CF95470059938E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8CB7FF521CF95470059938E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8CB7FFA21CF95470059938E /* UberMobileCodingChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UberMobileCodingChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8CB800021CF95470059938E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8CB800E21CFA3980059938E /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		B8CB801021CFA4850059938E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		B8CB801221CFA5200059938E /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		B8CB801421CFA6C10059938E /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		B8CB801821CFA8F10059938E /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		B8CB801A21CFABC20059938E /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		B8CB801E21CFB41F0059938E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B8CB802221CFB93D0059938E /* FlickrImageEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageEndPoint.swift; sourceTree = "<group>"; };
+		B8CB802421CFB95D0059938E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B8DABF0921D4E1C90091826B /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
+		B8DABF0B21D4E3250091826B /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
+		B8DABF0D21D4E3890091826B /* FlickrImageViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageViewControllerPresenter.swift; sourceTree = "<group>"; };
+		B8DABF0F21D4EEB00091826B /* FlickrImageViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageViewSpy.swift; sourceTree = "<group>"; };
+		B8DABF1121D4F1740091826B /* FlickrImageVIewControllerPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageVIewControllerPresenterTest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8CB7FE321CF95450059938E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8CB7FF721CF95470059938E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B844426521D08C3000B9F304 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B844426621D0974600B9F304 /* Cell */,
+				B857180221D14BA2000A702E /* FlickrImageSearchViewController.swift */,
+				B85717FC21D0DC22000A702E /* FlickrSearchViewControllerPresenter.swift */,
+				B844426921D0AD6600B9F304 /* FlickrImageViewController.swift */,
+				B8DABF0D21D4E3890091826B /* FlickrImageViewControllerPresenter.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B844426621D0974600B9F304 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B844426721D0976200B9F304 /* ImageCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B8AF0AB121D36930006E1025 /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				B8AF0AB221D369F5006E1025 /* FlikrImageSearchViewSpy.swift */,
+				B8AF0AB421D36A07006E1025 /* NetworkManagerProtocolSpy.swift */,
+				B8DABF0F21D4EEB00091826B /* FlickrImageViewSpy.swift */,
+				B870EF7321D4FABD00792267 /* RouterSpy.swift */,
+			);
+			path = Spy;
+			sourceTree = "<group>";
+		};
+		B8CB7FDD21CF95450059938E = {
+			isa = PBXGroup;
+			children = (
+				B8CB7FE821CF95450059938E /* UberMobileCodingChallenge */,
+				B8CB7FFD21CF95470059938E /* UberMobileCodingChallengeTests */,
+				B8CB7FE721CF95450059938E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B8CB7FE721CF95450059938E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8CB7FE621CF95450059938E /* UberMobileCodingChallenge.app */,
+				B8CB7FFA21CF95470059938E /* UberMobileCodingChallengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8CB7FE821CF95450059938E /* UberMobileCodingChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				B844426521D08C3000B9F304 /* Controller */,
+				B8CB802621CFBA390059938E /* Model */,
+				B8CB800921CF95580059938E /* NetworkLayer */,
+				B8CB7FE921CF95450059938E /* AppDelegate.swift */,
+				B8CB7FED21CF95450059938E /* Main.storyboard */,
+				B8CB7FF021CF95470059938E /* Assets.xcassets */,
+				B8CB7FF221CF95470059938E /* LaunchScreen.storyboard */,
+				B8CB7FF521CF95470059938E /* Info.plist */,
+			);
+			path = UberMobileCodingChallenge;
+			sourceTree = "<group>";
+		};
+		B8CB7FFD21CF95470059938E /* UberMobileCodingChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8AF0AB121D36930006E1025 /* Spy */,
+				B8AF0AAF21D36866006E1025 /* FlickrViewControllerPresenterTest.swift */,
+				B8CB800021CF95470059938E /* Info.plist */,
+				B8DABF0921D4E1C90091826B /* RouterTest.swift */,
+				B8DABF0B21D4E3250091826B /* NetworkManagerTest.swift */,
+				B8DABF1121D4F1740091826B /* FlickrImageVIewControllerPresenterTest.swift */,
+				B870EF7521D50E2500792267 /* FlickrImageSearchViewControllerTests.swift */,
+			);
+			path = UberMobileCodingChallengeTests;
+			sourceTree = "<group>";
+		};
+		B8CB800921CF95580059938E /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				B8CB800D21CFA3760059938E /* Encoding */,
+				B8CB800C21CFA36A0059938E /* Manager */,
+				B8CB800B21CFA3550059938E /* Service */,
+				B8CB800A21CFA2FE0059938E /* EndPoint */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		B8CB800A21CFA2FE0059938E /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				B8CB802221CFB93D0059938E /* FlickrImageEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		B8CB800B21CFA3550059938E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B8CB800E21CFA3980059938E /* EndPointType.swift */,
+				B8CB801021CFA4850059938E /* HTTPMethod.swift */,
+				B8CB801221CFA5200059938E /* HTTPTask.swift */,
+				B8CB801E21CFB41F0059938E /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B8CB800C21CFA36A0059938E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B8CB802421CFB95D0059938E /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B8CB800D21CFA3760059938E /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				B8CB801421CFA6C10059938E /* ParameterEncoding.swift */,
+				B8CB801821CFA8F10059938E /* URLParameterEncoder.swift */,
+				B8CB801A21CFABC20059938E /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		B8CB802621CFBA390059938E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B85717FE21D0DC8C000A702E /* FlickrImage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8CB7FE521CF95450059938E /* UberMobileCodingChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8CB800321CF95470059938E /* Build configuration list for PBXNativeTarget "UberMobileCodingChallenge" */;
+			buildPhases = (
+				B8CB7FE221CF95450059938E /* Sources */,
+				B8CB7FE321CF95450059938E /* Frameworks */,
+				B8CB7FE421CF95450059938E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UberMobileCodingChallenge;
+			productName = UberMobileCodingChallenge;
+			productReference = B8CB7FE621CF95450059938E /* UberMobileCodingChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B8CB7FF921CF95470059938E /* UberMobileCodingChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8CB800621CF95470059938E /* Build configuration list for PBXNativeTarget "UberMobileCodingChallengeTests" */;
+			buildPhases = (
+				B8CB7FF621CF95470059938E /* Sources */,
+				B8CB7FF721CF95470059938E /* Frameworks */,
+				B8CB7FF821CF95470059938E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8CB7FFC21CF95470059938E /* PBXTargetDependency */,
+			);
+			name = UberMobileCodingChallengeTests;
+			productName = UberMobileCodingChallengeTests;
+			productReference = B8CB7FFA21CF95470059938E /* UberMobileCodingChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8CB7FDE21CF95450059938E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = OrgID;
+				TargetAttributes = {
+					B8CB7FE521CF95450059938E = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					B8CB7FF921CF95470059938E = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = B8CB7FE521CF95450059938E;
+					};
+				};
+			};
+			buildConfigurationList = B8CB7FE121CF95450059938E /* Build configuration list for PBXProject "UberMobileCodingChallenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8CB7FDD21CF95450059938E;
+			productRefGroup = B8CB7FE721CF95450059938E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8CB7FE521CF95450059938E /* UberMobileCodingChallenge */,
+				B8CB7FF921CF95470059938E /* UberMobileCodingChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8CB7FE421CF95450059938E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8CB7FF421CF95470059938E /* LaunchScreen.storyboard in Resources */,
+				B8CB7FF121CF95470059938E /* Assets.xcassets in Resources */,
+				B8CB7FEF21CF95450059938E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8CB7FF821CF95470059938E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8CB7FE221CF95450059938E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8CB802521CFB95D0059938E /* NetworkManager.swift in Sources */,
+				B8DABF0E21D4E3890091826B /* FlickrImageViewControllerPresenter.swift in Sources */,
+				B85717FD21D0DC22000A702E /* FlickrSearchViewControllerPresenter.swift in Sources */,
+				B8CB801F21CFB41F0059938E /* Router.swift in Sources */,
+				B8CB802321CFB93D0059938E /* FlickrImageEndPoint.swift in Sources */,
+				B8CB801921CFA8F10059938E /* URLParameterEncoder.swift in Sources */,
+				B85717FF21D0DC8C000A702E /* FlickrImage.swift in Sources */,
+				B8CB801521CFA6C10059938E /* ParameterEncoding.swift in Sources */,
+				B8CB801121CFA4850059938E /* HTTPMethod.swift in Sources */,
+				B8CB801321CFA5200059938E /* HTTPTask.swift in Sources */,
+				B8CB801B21CFABC20059938E /* JSONParameterEncoder.swift in Sources */,
+				B844426821D0976200B9F304 /* ImageCollectionViewCell.swift in Sources */,
+				B8CB7FEA21CF95450059938E /* AppDelegate.swift in Sources */,
+				B8CB800F21CFA3980059938E /* EndPointType.swift in Sources */,
+				B844426A21D0AD6600B9F304 /* FlickrImageViewController.swift in Sources */,
+				B857180321D14BA2000A702E /* FlickrImageSearchViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8CB7FF621CF95470059938E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8DABF0C21D4E3250091826B /* NetworkManagerTest.swift in Sources */,
+				B8DABF0A21D4E1C90091826B /* RouterTest.swift in Sources */,
+				B870EF7621D50E2500792267 /* FlickrImageSearchViewControllerTests.swift in Sources */,
+				B8DABF1021D4EEB00091826B /* FlickrImageViewSpy.swift in Sources */,
+				B8AF0AB321D369F5006E1025 /* FlikrImageSearchViewSpy.swift in Sources */,
+				B8DABF1221D4F1740091826B /* FlickrImageVIewControllerPresenterTest.swift in Sources */,
+				B870EF7421D4FABD00792267 /* RouterSpy.swift in Sources */,
+				B8AF0AB521D36A07006E1025 /* NetworkManagerProtocolSpy.swift in Sources */,
+				B8AF0AB021D36866006E1025 /* FlickrViewControllerPresenterTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8CB7FFC21CF95470059938E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8CB7FE521CF95450059938E /* UberMobileCodingChallenge */;
+			targetProxy = B8CB7FFB21CF95470059938E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B8CB7FED21CF95450059938E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8CB7FEE21CF95450059938E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B8CB7FF221CF95470059938E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8CB7FF321CF95470059938E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8CB800121CF95470059938E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8CB800221CF95470059938E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8CB800421CF95470059938E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = UberMobileCodingChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.orgid.UberMobileCodingChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8CB800521CF95470059938E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = UberMobileCodingChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.orgid.UberMobileCodingChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B8CB800721CF95470059938E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UberMobileCodingChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.orgid.UberMobileCodingChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UberMobileCodingChallenge.app/UberMobileCodingChallenge";
+			};
+			name = Debug;
+		};
+		B8CB800821CF95470059938E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = UberMobileCodingChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.orgid.UberMobileCodingChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UberMobileCodingChallenge.app/UberMobileCodingChallenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8CB7FE121CF95450059938E /* Build configuration list for PBXProject "UberMobileCodingChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8CB800121CF95470059938E /* Debug */,
+				B8CB800221CF95470059938E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8CB800321CF95470059938E /* Build configuration list for PBXNativeTarget "UberMobileCodingChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8CB800421CF95470059938E /* Debug */,
+				B8CB800521CF95470059938E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8CB800621CF95470059938E /* Build configuration list for PBXNativeTarget "UberMobileCodingChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8CB800721CF95470059938E /* Debug */,
+				B8CB800821CF95470059938E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B8CB7FDE21CF95450059938E /* Project object */;
+}
