@@ -24,7 +24,7 @@ enum Result<String>{
 }
 protocol NetworkManagerProtocol {
     
-    func getFlikrImage(page: Int, text: String, completion: @escaping (_ flikrImages: [FlickrImage]?,_ error: String?)->())
+    func getFlickrImage(page: Int, text: String, completion: @escaping (_ flickrImages: [FlickrImage]?,_ error: String?)->())
     func downloadImage(flickrImage: FlickrImage, completion: @escaping (_ imageData: Data?,_ error: String?)->())
     
     func cancelDownloading()
@@ -33,7 +33,7 @@ struct NetworkManager: NetworkManagerProtocol {
    
     
     static let environment : NetworkEnvironment = .production
-    static let FlikrAPIKey = "3e7cc266ae2b0e0d78e279ce8e361736"
+    static let FlickrAPIKey = "3e7cc266ae2b0e0d78e279ce8e361736"
     var router: Router<FlickrImageApi>!
     
     init(_ router: Router<FlickrImageApi> = Router<FlickrImageApi>()) {
@@ -64,7 +64,7 @@ struct NetworkManager: NetworkManagerProtocol {
         }
     }
     
-    func getFlikrImage(page: Int, text: String, completion: @escaping (_ flikrImages: [FlickrImage]?,_ error: String?)->()){
+    func getFlickrImage(page: Int, text: String, completion: @escaping (_ flickrImages: [FlickrImage]?,_ error: String?)->()){
         router.request(.newFlickrImages(page: page, text: text)) { data, response, error in
             
             if error != nil {
@@ -83,7 +83,7 @@ struct NetworkManager: NetworkManagerProtocol {
                         print(responseData)
                         let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
                         print(jsonData)
-                        let apiResponse = try JSONDecoder().decode(FlikrImagesResponse.self, from: responseData)
+                        let apiResponse = try JSONDecoder().decode(FlickrImagesResponse.self, from: responseData)
                         completion(apiResponse.photos.flickrImages,nil)
                     }catch {
                         print(error)

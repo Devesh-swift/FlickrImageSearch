@@ -15,7 +15,7 @@
 		B870EF7421D4FABD00792267 /* RouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870EF7321D4FABD00792267 /* RouterSpy.swift */; };
 		B870EF7621D50E2500792267 /* FlickrImageSearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870EF7521D50E2500792267 /* FlickrImageSearchViewControllerTests.swift */; };
 		B8AF0AB021D36866006E1025 /* FlickrViewControllerPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AF0AAF21D36866006E1025 /* FlickrViewControllerPresenterTest.swift */; };
-		B8AF0AB321D369F5006E1025 /* FlikrImageSearchViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AF0AB221D369F5006E1025 /* FlikrImageSearchViewSpy.swift */; };
+		B8AF0AB321D369F5006E1025 /* FlickrImageSearchViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AF0AB221D369F5006E1025 /* FlickrImageSearchViewSpy.swift */; };
 		B8AF0AB521D36A07006E1025 /* NetworkManagerProtocolSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AF0AB421D36A07006E1025 /* NetworkManagerProtocolSpy.swift */; };
 		B8CB7FEA21CF95450059938E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CB7FE921CF95450059938E /* AppDelegate.swift */; };
 		B8CB7FEF21CF95450059938E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8CB7FED21CF95450059938E /* Main.storyboard */; };
@@ -56,7 +56,7 @@
 		B870EF7321D4FABD00792267 /* RouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterSpy.swift; sourceTree = "<group>"; };
 		B870EF7521D50E2500792267 /* FlickrImageSearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageSearchViewControllerTests.swift; sourceTree = "<group>"; };
 		B8AF0AAF21D36866006E1025 /* FlickrViewControllerPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrViewControllerPresenterTest.swift; sourceTree = "<group>"; };
-		B8AF0AB221D369F5006E1025 /* FlikrImageSearchViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlikrImageSearchViewSpy.swift; sourceTree = "<group>"; };
+		B8AF0AB221D369F5006E1025 /* FlickrImageSearchViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageSearchViewSpy.swift; sourceTree = "<group>"; };
 		B8AF0AB421D36A07006E1025 /* NetworkManagerProtocolSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocolSpy.swift; sourceTree = "<group>"; };
 		B8CB7FE621CF95450059938E /* UberMobileCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberMobileCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CB7FE921CF95450059938E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		B8AF0AB121D36930006E1025 /* Spy */ = {
 			isa = PBXGroup;
 			children = (
-				B8AF0AB221D369F5006E1025 /* FlikrImageSearchViewSpy.swift */,
+				B8AF0AB221D369F5006E1025 /* FlickrImageSearchViewSpy.swift */,
 				B8AF0AB421D36A07006E1025 /* NetworkManagerProtocolSpy.swift */,
 				B8DABF0F21D4EEB00091826B /* FlickrImageViewSpy.swift */,
 				B870EF7321D4FABD00792267 /* RouterSpy.swift */,
@@ -362,7 +362,7 @@
 				B8DABF0A21D4E1C90091826B /* RouterTest.swift in Sources */,
 				B870EF7621D50E2500792267 /* FlickrImageSearchViewControllerTests.swift in Sources */,
 				B8DABF1021D4EEB00091826B /* FlickrImageViewSpy.swift in Sources */,
-				B8AF0AB321D369F5006E1025 /* FlikrImageSearchViewSpy.swift in Sources */,
+				B8AF0AB321D369F5006E1025 /* FlickrImageSearchViewSpy.swift in Sources */,
 				B8DABF1221D4F1740091826B /* FlickrImageVIewControllerPresenterTest.swift in Sources */,
 				B870EF7421D4FABD00792267 /* RouterSpy.swift in Sources */,
 				B8AF0AB521D36A07006E1025 /* NetworkManagerProtocolSpy.swift in Sources */,

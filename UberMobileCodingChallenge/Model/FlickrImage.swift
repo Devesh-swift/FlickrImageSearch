@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct FlikrImagesResponse {
+struct FlickrImagesResponse {
     let photos: FlickrPhoto
 }
 
-extension FlikrImagesResponse: Decodable {
+extension FlickrImagesResponse: Decodable {
 
     private enum FlickrImagesResponseCodingKeys: String, CodingKey {
         case photos = "photos"

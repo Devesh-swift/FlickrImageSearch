@@ -12,12 +12,12 @@ import XCTest
 
 class FlickrViewControllerPresenterTest: XCTestCase {
 
-    var view: FlikrImageSearchViewSpy!
+    var view: FlickrImageSearchViewSpy!
     var networkManager: NetworkManagerProtocolSpy!
     var flickrViewControllerPresenter: FlickrSearchViewControllerPresenter!
     
     override func setUp() {
-        view = FlikrImageSearchViewSpy()
+        view = FlickrImageSearchViewSpy()
         networkManager = NetworkManagerProtocolSpy()
         flickrViewControllerPresenter = FlickrSearchViewControllerPresenter(view: view, networkManager: networkManager)
     }
@@ -28,20 +28,20 @@ class FlickrViewControllerPresenterTest: XCTestCase {
         flickrViewControllerPresenter = nil
     }
     
-    func testFetchFlikrImagesSuccess() {
+    func testFetchFlickrImagesSuccess() {
         networkManager.images = [FlickrImage].init()
-        flickrViewControllerPresenter.fetchFlikrImages(text: "")
-        XCTAssertTrue(networkManager.isGetFlikrImageCalled)
+        flickrViewControllerPresenter.fetchFlickrImages(text: "")
+        XCTAssertTrue(networkManager.isGetFlickrImageCalled)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             XCTAssertTrue(self.view.isImageFetchedCalled)
         }
     }
 
-    func testFetchFlikrImagesFailed() {
+    func testFetchFlickrImagesFailed() {
         networkManager.errorString = "Unable to download image"
-        flickrViewControllerPresenter.fetchFlikrImages(text: "")
+        flickrViewControllerPresenter.fetchFlickrImages(text: "")
 
-        XCTAssertTrue(networkManager.isGetFlikrImageCalled)
+        XCTAssertTrue(networkManager.isGetFlickrImageCalled)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             XCTAssertTrue(self.view.isUnableToFetchImagesCalled)
         }

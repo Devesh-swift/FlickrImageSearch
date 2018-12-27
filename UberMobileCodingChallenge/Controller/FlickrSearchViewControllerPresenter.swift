@@ -9,18 +9,18 @@
 import Foundation
 
 class FlickrSearchViewControllerPresenter {
-    weak var view: FlikrImageSearchView?
+    weak var view: FlickrImageSearchView?
     var networkManager: NetworkManagerProtocol
     var flickrImages: [FlickrImage] = [FlickrImage]()
     
-    init(view: FlikrImageSearchView, networkManager: NetworkManagerProtocol = NetworkManager()) {
+    init(view: FlickrImageSearchView, networkManager: NetworkManagerProtocol = NetworkManager()) {
         self.view = view
         self.networkManager = networkManager
     }
     
-    func fetchFlikrImages(text: String){
+    func fetchFlickrImages(text: String){
         let page = flickrImages.count/10
-        networkManager.getFlikrImage(page: page, text: text) { (flickr_Images, error) in
+        networkManager.getFlickrImage(page: page, text: text) { (flickr_Images, error) in
             
             DispatchQueue.main.async {
                 if let errorString = error {

@@ -65,38 +65,38 @@ class NetworkManagerTest: XCTestCase {
         XCTAssertTrue(self.router.isRequestCalled)
     }
     
-    func testGetFlikrImageSuccess() {
+    func testGetFlickrImageSuccess() {
         
         self.router.data = "{\"photos\":{\"page\":1,\"pages\":156284,\"perpage\":1,\"total\":\"156284\",\"photo\":[{\"id\":\"45761826554\",\"owner\":\"58679537@N00\",\"secret\":\"9527bbeabc\",\"server\":\"4828\",\"farm\":5,\"title\":\"Cats guarding me in the bathroom!\",\"ispublic\":1,\"isfriend\":0,\"isfamily\":0}]},\"stat\":\"ok\"}".data(using: .utf8)
         self.router.response = HTTPURLResponse.init(url: URL(string: "https://www.google.com/")!, statusCode: 200, httpVersion: nil, headerFields: nil)
         
-        networkManager.getFlikrImage(page: 0, text: "test") { (flickrimage, error) in
+        networkManager.getFlickrImage(page: 0, text: "test") { (flickrimage, error) in
             
         }
         XCTAssertTrue(self.router.isRequestCalled)
     }
     
-    func testGetFlikrImageFailedWithNoImageData() {
+    func testGetFlickrImageFailedWithNoImageData() {
         self.router.response = HTTPURLResponse.init(url: URL(string: "https://www.google.com/")!, statusCode: 200, httpVersion: nil, headerFields: nil)
-        networkManager.getFlikrImage(page: 0, text: "test") { (flickrimage, error) in
+        networkManager.getFlickrImage(page: 0, text: "test") { (flickrimage, error) in
             XCTAssertEqual(error, "Response returned with no data to decode.")
         }
         XCTAssertTrue(self.router.isRequestCalled)
     }
     
-    func testGetFlikrImageFailed() {
+    func testGetFlickrImageFailed() {
         self.router.error = NSError(domain:"", code:401, userInfo:[ NSLocalizedDescriptionKey: "Please check your network connection."])
         
-        networkManager.getFlikrImage(page: 0, text: "test") { (flickrimage, error) in
+        networkManager.getFlickrImage(page: 0, text: "test") { (flickrimage, error) in
             XCTAssertEqual(error, "Please check your network connection.")
         }
         XCTAssertTrue(self.router.isRequestCalled)
     }
     
-    func testGetFlikrImageFailedDueToNetwork() {
+    func testGetFlickrImageFailedDueToNetwork() {
         self.router.response = HTTPURLResponse.init(url: URL(string: "https://www.google.com/")!, statusCode: 500, httpVersion: nil, headerFields: nil)
         
-        networkManager.getFlikrImage(page: 0, text: "test") { (flickrimage, error) in
+        networkManager.getFlickrImage(page: 0, text: "test") { (flickrimage, error) in
             XCTAssertEqual(error, "You need to be authenticated first.")
         }
         

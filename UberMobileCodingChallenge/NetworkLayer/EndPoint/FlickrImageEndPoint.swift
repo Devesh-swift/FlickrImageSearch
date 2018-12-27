@@ -57,7 +57,7 @@ extension FlickrImageApi: EndPointType {
             return .requestParameters(bodyParameters: nil,
                                       bodyEncoding: .urlEncoding,
                                       urlParameters: ["method": "flickr.photos.search",
-                                                      "api_key": NetworkManager.FlikrAPIKey,
+                                                      "api_key": NetworkManager.FlickrAPIKey,
                                                       "format": "json",
                                                       "nojsoncallback": "1",
                                                       "safe_search": "1",

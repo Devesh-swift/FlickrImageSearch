@@ -13,14 +13,14 @@ import XCTest
 
 class NetworkManagerProtocolSpy: NetworkManagerProtocol {
     
-    var isGetFlikrImageCalled = false
+    var isGetFlickrImageCalled = false
     var isDownloadImageCalled = false
     var isCancelDownloadingCalled = false
     
     var images:[FlickrImage]? = nil
     var errorString: String? = nil
-    func getFlikrImage(page: Int, text: String, completion: @escaping ([FlickrImage]?, String?) -> ()) {
-        isGetFlikrImageCalled = true
+    func getFlickrImage(page: Int, text: String, completion: @escaping ([FlickrImage]?, String?) -> ()) {
+        isGetFlickrImageCalled = true
         completion(images, errorString)
     }
     

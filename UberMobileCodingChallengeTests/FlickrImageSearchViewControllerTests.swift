@@ -34,11 +34,11 @@ class FlickrImageSearchViewControllerTests: XCTestCase {
         viewController.presenter.flickrImages = fakeImagesName
         
 
-        viewController.flikrImageCollectionView.reloadData()
+        viewController.flickrImageCollectionView.reloadData()
         RunLoop.main.run(until: Date(timeIntervalSinceNow: 0.5))
         
 
-        let cells = viewController?.flikrImageCollectionView.visibleCells as! [ImageCollectionViewCell]
+        let cells = viewController?.flickrImageCollectionView.visibleCells as! [ImageCollectionViewCell]
         XCTAssertEqual(cells.count, fakeImagesName.count, "Cells count should match array.count")
     }
 }

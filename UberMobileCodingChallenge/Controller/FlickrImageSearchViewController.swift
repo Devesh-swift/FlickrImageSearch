@@ -11,7 +11,7 @@ import Foundation
 
 let imageCache = NSCache<NSString, UIImage>()
 
-protocol FlikrImageSearchView: class {
+protocol FlickrImageSearchView: class {
     func imageFetched()
     func unableToFetchImages(errorString: String)
 }
@@ -19,7 +19,7 @@ protocol FlikrImageSearchView: class {
 class FlickrImageSearchViewController: UIViewController {
 
     @IBOutlet weak var searchbar: UISearchBar!
-    @IBOutlet weak var flikrImageCollectionView: UICollectionView!
+    @IBOutlet weak var flickrImageCollectionView: UICollectionView!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var acitivityIndicator: UIActivityIndicatorView!
     
@@ -34,7 +34,7 @@ class FlickrImageSearchViewController: UIViewController {
     }
     
     func loadNextSet() {
-        self.presenter.fetchFlikrImages(text: searchbar.text!)
+        self.presenter.fetchFlickrImages(text: searchbar.text!)
     }
 }
 
@@ -43,7 +43,7 @@ extension FlickrImageSearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         self.presenter.flickrImages.removeAll()
-        self.presenter.fetchFlikrImages(text: searchbar.text!)
+        self.presenter.fetchFlickrImages(text: searchbar.text!)
         self.acitivityIndicator.startAnimating()
         imageCache.removeAllObjects()
     }
@@ -96,7 +96,7 @@ extension FlickrImageSearchViewController: UICollectionViewDelegate, UICollectio
 }
 
 
-extension FlickrImageSearchViewController: FlikrImageSearchView {
+extension FlickrImageSearchViewController: FlickrImageSearchView {
     func imageFetched() {
         if presenter.flickrImages.count == 0 {
                 self.messageLabel.text = "Unable to load images. Please try again."
@@ -104,14 +104,14 @@ extension FlickrImageSearchViewController: FlikrImageSearchView {
             self.messageLabel.text = ""
         }
         self.acitivityIndicator.stopAnimating()
-        self.flikrImageCollectionView.reloadData()
+        self.flickrImageCollectionView.reloadData()
         isWating = false
 
     }
     
     func unableToFetchImages(errorString: String) {
         self.acitivityIndicator.stopAnimating()
-        self.flikrImageCollectionView.reloadData()
+        self.flickrImageCollectionView.reloadData()
         isWating = false
         
         if presenter.flickrImages.count == 0 {

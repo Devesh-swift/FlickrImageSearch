@@ -13,9 +13,13 @@ class ImageCollectionViewCell: UICollectionViewCell {
     let networkManager = NetworkManager()
     var flickrImage: FlickrImage!
     
+    fileprivate func flickrImageKey(_flickrImage: FlickrImage) -> NSString {
+        return "\(_flickrImage.server)/\(_flickrImage.id)_\(_flickrImage.secret).jpg" as NSString
+    }
+    
     func setupData(flickrImage: FlickrImage) {
         self.flickrImage = flickrImage
-        if let imageFromCache = imageCache.object(forKey: "\(flickrImage.server)/\(flickrImage.id)_\(flickrImage.secret).jpg" as NSString) {
+        if let imageFromCache = imageCache.object(forKey: flickrImageKey(_flickrImage: flickrImage)) {
             self.filkerImageView.image = imageFromCache
             return
         }
@@ -27,7 +31,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
                     self.filkerImageView.image = UIImage.init(named: "placeholder")
                 } else {
                     if let imageData = data ,let imageToCache = UIImage(data: imageData) {
-                        imageCache.setObject( imageToCache, forKey: "\(flickrImage.server)/\(flickrImage.id)_\(flickrImage.secret).jpg" as NSString)
+                        imageCache.setObject( imageToCache, forKey: self.flickrImageKey(_flickrImage: flickrImage))
                         if self.flickrImage == flickrImage {
                             self.filkerImageView.image = imageToCache
                         }
